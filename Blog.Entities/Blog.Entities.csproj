@@ -42,7 +42,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Entity\Article.cs" />
-    <Compile Include="Entity\ArticleTag.cs" />
     <Compile Include="Entity\BaseEntity.cs" />
     <Compile Include="Entity\Category.cs" />
     <Compile Include="Entity\Comment.cs" />
