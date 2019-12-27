@@ -22,6 +22,7 @@ namespace Blog.DAL.Repositories
         public TEntity Add(TEntity entity)
         {
             TEntity add = _context.Set<TEntity>().Add(entity);
+            _context.SaveChanges();
 
             return add;
         }
@@ -50,11 +51,13 @@ namespace Blog.DAL.Repositories
         public void Update(TEntity entity)
         {
             _context.Entry(entity).State = EntityState.Modified;
+            _context.SaveChanges();
         }
 
         public void Delete(TEntity entity)
         {
             _context.Set<TEntity>().Remove(entity);
+            _context.SaveChanges();
         }
     }
 }
